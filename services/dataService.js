@@ -18,7 +18,7 @@ const conopts = {
 const pool = new Pool(conopts);
 
 async function getTopic() {
-    let data = await pool.query("SELECT * FROM Topic ORDER BY id DESC")
+    let data = await pool.query("SELECT * FROM Topic ORDER BY id ASC")
     return data.rows;
 }
 
